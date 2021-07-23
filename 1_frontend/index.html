@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Fontawesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- custom JS -->
+    <script defer src="./scripts/nav.js"></script>
+    <script defer src="./scripts/timeCounter.js"></script>
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- added with nav.js -->
+      <div class="header-top">
+        <div class="header-top-left">
+          <a href="index.html"><img src="./assets/shop-logo.png" alt="" /></a>
+        </div>
+        <div class="header-top-right">
+          <div class="header-top-right-phone">
+            <i class="fas fa-mobile-alt"></i>
+            <span>+1 800 800 00</span>
+          </div>
+          <div class="header-top-right-email">
+            <i class="far fa-envelope"></i>
+            <span>mail@shop.io</span>
+          </div>
+          <div class="header-top-right-cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-items"
+              ><span id="cart-items-count">0</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <i class="fas fa-bars"></i>
+      </nav>
+    </header>
+    <main>
+      <!-- b a n n e r -->
+      <section class="landing-page-banner">
+        <h1>
+          Lorem ipsum lorem lorem <br />
+          ipsum lorem lorem
+        </h1>
+        <button class="btn-primary-dark"><a href="">Shop Here</a></button>
+      </section>
+      <!-- s a l e  b a n n e r -->
+      <section class="sale-banner">
+        <div class="sale-end-counter-wrapper">
+          <div class="sale-end-counter">
+            <span id="days"></span>
+            <span id="hours"></span>
+            <span id="mins"></span>
+            <span id="secs"></span>
+            <h2 id="end"></h2>
+          </div>
+        </div>
+      </section>
+      <!-- c a t e g o r i e s   b a n n e r s -->
+      <section class="landing-page-category-banners">
+        <div
+          class="landing-page-category-banners-item landing-page-category-bags"
+        >
+          <!-- single category link -->
+          <a class="landing-page-category-bags-link">
+            <h3>Bags <i class="fas fa-angle-double-right"></i></h3>
+          </a>
+        </div>
+        <div
+          class="landing-page-category-banners-item landing-page-category-shoes"
+        >
+          <!-- single category link -->
+          <a class="landing-page-category-bags-link">
+            <h3>Shoes <i class="fas fa-angle-double-right"></i></h3>
+          </a>
+        </div>
+        <div
+          class="
+            landing-page-category-banners-item landing-page-category-clothes
+          "
+        >
+          <!-- single category link -->
+          <a class="landing-page-category-bags-link">
+            <h3>Clothes <i class="fas fa-angle-double-right"></i></h3>
+          </a>
+        </div>
+        <div
+          class="
+            landing-page-category-banners-item landing-page-category-accessories
+          "
+        >
+          <!-- single category link -->
+          <a class="landing-page-category-bags-link">
+            <h3>Accessories <i class="fas fa-angle-double-right"></i></h3>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <!-- s i g n  u p  f o r m -->
+      <section class="singup-newsletter-form-wrapper">
+        <form id="signupToNewsletterForm">
+          <label for="emailForNewsletter">Sign up to our mailing list</label>
+          <div class="sign-up-inputs">
+            <input type="email" placeholder="Sign up now" />
+            <button class="btn-primary-dark">Sign up</button>
+          </div>
+        </form>
+      </section>
+    </footer>
+  </body>
+</html>

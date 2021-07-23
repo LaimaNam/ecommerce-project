@@ -1,0 +1,276 @@
+/* Mobile first */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+:root {
+  --var-black: rgb(0, 0, 0);
+  --var-dark-color: #212127;
+  --var-light-grey: rgb(177, 177, 177);
+}
+
+/* utilities */
+.btn-primary-dark {
+  padding: 15px 20px;
+  background-color: var(--var-dark-color);
+  color: #fff;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  border: 0;
+  cursor: pointer;
+  border-radius: 0;
+  font-size: 1em;
+  cursor: pointer;
+  /* -webkit-box-shadow: 1px 1px 14px -1px rgba(0, 0, 0, 0.77);
+  box-shadow: 1px 1px 14px -1px rgba(0, 0, 0, 0.77); */
+}
+.btn-primary-dark:hover {
+  background-color: #464647;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ----- H E A D E R -------- */
+header {
+  width: 100%;
+}
+
+header .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header .header-top .header-top-left {
+  width: 80px;
+}
+
+header .header-top .header-top-left img {
+  max-width: 100%;
+}
+
+header .header-top .header-top-right div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+header .header-top .header-top-right {
+  display: flex;
+  gap: 20px;
+}
+
+header .header-top .header-top-right i {
+  font-size: 22px;
+  color: var(--var-light-grey);
+}
+
+header .header-top .header-top-right span {
+  color: var(--var-light-grey);
+  /* font-size: 0.9em;
+  font-weight: 500; */
+}
+
+header .header-top .header-top-right .header-top-right-cart {
+  cursor: pointer;
+}
+
+.cart-items {
+  background-color: var(--var-black);
+  padding: 12px 12px;
+  border-radius: 100%;
+}
+
+.cart-items #cart-items-count {
+  position: absolute;
+  transform: translate(-50%, -60%);
+}
+
+/* navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+nav i {
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+#cart-items-count {
+  color: #fff;
+}
+
+/* -------------- L A N D I N G  P A G E ----------- */
+/* banner */
+.landing-page-banner {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(https://images.unsplash.com/photo-1566678124687-0cf350e352c8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+  object-fit: cover;
+  height: 70vh;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.landing-page-banner h1 {
+  color: #fff;
+  font-size: 3em;
+  line-height: 50px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.landing-page-banner button {
+  margin-top: 30px;
+}
+
+/* sale banner - time counter */
+.sale-banner .sale-end-counter-wrapper {
+  text-align: center;
+}
+
+.sale-banner .sale-end-counter-wrapper .sale-end-counter {
+  font-size: 2.5em;
+  color: #fff;
+  background-color: var(--var-dark-color);
+  padding-bottom: 10px;
+  margin-top: 5px;
+}
+
+/* category banners */
+.landing-page-category-banners {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px 20px 30px;
+}
+
+.landing-page-category-banners .landing-page-category-banners-item {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-page-category-banners
+  .landing-page-category-banners-item
+  .landing-page-category-bags-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-page-category-banners .landing-page-category-banners-item h3 {
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: lighter;
+  background-color: rgba(33, 33, 39, 0.7);
+  padding: 0 10px 5px 10px;
+}
+
+.landing-page-category-banners .landing-page-category-banners-item {
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+}
+
+.landing-page-category-banners .landing-page-category-bags {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(https://images.unsplash.com/photo-1559563458-527698bf5295?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80);
+}
+
+.landing-page-category-banners .landing-page-category-shoes {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80);
+}
+
+.landing-page-category-banners .landing-page-category-clothes {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(https://images.unsplash.com/photo-1588117260148-b47818741c74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80);
+}
+
+.landing-page-category-banners .landing-page-category-accessories {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(https://images.unsplash.com/photo-1595350072557-6a6fbced4c2f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+}
+
+/* s i g n   u p   f o r m */
+.singup-newsletter-form-wrapper {
+  padding: 60px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.singup-newsletter-form-wrapper #signupToNewsletterForm input {
+  padding: 8px 12px;
+  height: 52px;
+}
+
+/* ----- t a b l e t   v i e w ----------- */
+@media screen and (min-width: 540px) {
+  .landing-page-category-banners .landing-page-category-banners-item {
+    width: calc(100% / 2 - 15px);
+    height: 350px;
+  }
+}
+
+/*  ------- d e s k t o p   v i e w ----------- */
+
+@media screen and (min-width: 1024px) {
+  .landing-page-category-banners .landing-page-category-banners-item {
+    width: calc(100% / 4 - 15px);
+    height: 350px;
+  }
+}
