@@ -1,0 +1,165 @@
+/* Mobile first */
+/* ----- H E A D E R + navigation -------- */
+header {
+  width: 100%;
+}
+
+header .header-top {
+  display: flex;
+  max-width: 728px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header .header-top .header-top-left {
+  width: 80px;
+}
+
+header .header-top .header-top-left img {
+  width: 100%;
+  max-width: 100%;
+}
+
+header .header-top .header-top-right div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+header .header-top .header-top-right {
+  display: flex;
+  gap: 20px;
+}
+
+header .header-top .header-top-right i {
+  font-size: 22px;
+  color: var(--var-light-grey);
+}
+
+header .header-top .header-top-right span {
+  color: var(--var-light-grey);
+  /* font-size: 0.9em;
+    font-weight: 500; */
+}
+
+header .header-top .header-top-right .header-top-right-cart {
+  cursor: pointer;
+}
+
+.cart-items {
+  background-color: var(--var-black);
+  padding: 12px 12px;
+  border-radius: 100%;
+}
+
+.cart-items #cart-items-count {
+  position: absolute;
+  transform: translate(-50%, -60%);
+}
+
+#cart-items-count {
+  color: #fff;
+}
+
+/* -------------------------------- navigation */
+.navigation-toggler {
+  text-align: center;
+}
+
+.navigation-toggler i {
+  font-size: 1.2em;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+nav {
+  padding: 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 30px;
+  position: relative;
+  background: #f3f3f3;
+  display: none;
+}
+
+.active {
+  display: flex;
+}
+
+nav a {
+  color: var(--var-light-grey);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+nav .shop-links-wrapper {
+  background: #fff;
+  display: none;
+  min-width: 100%;
+}
+
+nav .shop-links-wrapper.shopLinksActive {
+  display: block;
+}
+
+nav .shop-links-wrapper .shop-links-list {
+  padding: 15px;
+}
+nav .shop-links-wrapper .shop-links-list li:not(:last-child) {
+  padding-bottom: 15px;
+}
+
+/* ----- t a b l e t   v i e w ----------- */
+
+@media screen and (min-width: 768px) {
+  .navigation-toggler i {
+    display: none;
+  }
+
+  /* .displayNone {
+    display: block;
+  } */
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: none;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+  }
+
+  nav a {
+    color: var(--var-light-grey);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+
+  nav .shop-links-wrapper {
+    position: absolute;
+    background: #fff;
+    top: 50px !important;
+    min-width: 20%;
+  }
+
+  nav .shop-links-wrapper .shop-links-list {
+    padding: 15px;
+  }
+  nav .shop-links-wrapper .shop-links-list li:not(:last-child) {
+    padding-bottom: 15px;
+  }
+}
+
+/*  ------- d e s k t o p   v i e w ----------- */
+
+@media screen and (min-width: 1024px) {
+  header .header-top {
+    max-width: 940px;
+  }
+}

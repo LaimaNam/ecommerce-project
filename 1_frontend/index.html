@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Home page</title>
     <!-- Fontawesome CDN -->
     <link
       rel="stylesheet"
@@ -20,61 +20,17 @@
       crossorigin="anonymous"
     ></script>
     <!-- custom JS -->
-    <script defer src="./scripts/nav.js"></script>
-    <script defer src="./scripts/timeCounter.js"></script>
+    <script defer src="./main.js" type="module"></script>
+    <script defer src="./scripts/landing_page.js" type="module"></script>
     <!-- custom CSS -->
-    <link rel="stylesheet" href="./styles/landing_page.css" />
+    <link rel="stylesheet" href="./styles/1_navigation.css" />
+    <link rel="stylesheet" href="./styles/utilities.css" />
+    <link rel="stylesheet" href="./styles/2_main_landing_page.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
   </head>
   <body>
     <header>
-      <!-- added with nav.js -->
-      <div class="header-top">
-        <div class="header-top-left">
-          <a href="index.html"><img src="./assets/shop-logo.png" alt="" /></a>
-        </div>
-        <div class="header-top-right">
-          <div class="header-top-right-phone">
-            <i class="fas fa-mobile-alt"></i>
-            <span>+1 800 800 00</span>
-          </div>
-          <div class="header-top-right-email">
-            <i class="far fa-envelope"></i>
-            <span>mail@shop.io</span>
-          </div>
-          <div class="header-top-right-cart">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="cart-items"
-              ><span id="cart-items-count">0</span>
-            </span>
-          </div>
-        </div>
-      </div>
-      <!-- header bottom-->
-      <nav>
-        <!-- burger icon -->
-        <div class="navigation-toggler">
-          <i class="fas fa-bars"></i>
-        </div>
-        <!-- navigation links -->
-        <div class="navigation-links-wrapper">
-          <div class="navigation-links">
-            <a href="">Home</a>
-            <a href="" class="navigation-shop-link"
-              >Shop <i class="fas fa-angle-down"></i
-            ></a>
-            <div class="shop-hover-links-wrapper">
-              <ul class="shop-hover-links-list">
-                <li><a href="">All</a></li>
-                <li><a href="">Accessories</a></li>
-                <li><a href="">Jewelry</a></li>
-                <li><a href="">Bags</a></li>
-                <li><a href="">Clothes</a></li>
-              </ul>
-            </div>
-            <a href="">Contact</a>
-          </div>
-        </div>
-      </nav>
+      <!-- rendered with nav.js -->
     </header>
     <main>
       <!-- b a n n e r -->
@@ -138,16 +94,9 @@
       </section>
     </main>
     <footer>
-      <!-- s i g n  u p  f o r m -->
-      <section class="singup-newsletter-form-wrapper">
-        <form id="signupToNewsletterForm">
-          <label for="emailForNewsletter">Sign up to our mailing list</label>
-          <div class="sign-up-inputs">
-            <input type="email" placeholder="Sign up now" />
-            <button class="btn-primary-dark">Sign up</button>
-          </div>
-        </form>
-      </section>
+      <!-- rendered with footer.js -->
+      <section class="singup-newsletter-form-wrapper"></section>
+      <section class="footer-bootom-section"></section>
     </footer>
   </body>
 </html>

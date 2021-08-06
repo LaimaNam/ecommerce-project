@@ -1,0 +1,14 @@
+/* s i g n   u p   f o r m */
+.singup-newsletter-form-wrapper {
+  padding: 60px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.singup-newsletter-form-wrapper #signupToNewsletterForm input {
+  padding: 8px 12px;
+  height: 52px;
+}
