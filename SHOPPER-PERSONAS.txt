@@ -1,0 +1,123 @@
+-------------------------------------------------------
+Browsing shopper persona -------------------------->DONE
+--------------------------------------------------------
+Wants&needs:
+- Wants to be up to date on the latests styles and trends
+- Wants a quality source of inspiration and entertainments
+- Wants to dream of and plan for a significant purchase
+- Needs the ability to save items for later or to share products on social media
+- Needs curated and regularly updated website content
+- Needs to see items on sale and what others are buying
+
+"The website had several good options, but I knew that I'll 
+come in person today to see the items up close"
+
+Frustrations:
+- No new content after multiple attempts to check back
+- Absence of related, matching, or suggested products
+- Confusing website navigation, hierarchy, and content
+
+Shopping habits:
+- Chooses to spend time with website and brand
+- Makes selections online prior visiting the shop
+- Is a leisurely shopper looking to kill some time
+
+---------------------------------------------------
+One-time shopper -------------------------> DONE
+--------------------------------------------------
+Wants&needs:
+- Wants to check out without creating an account
+- Wants the site to remember no personal information
+- Wants to see the complete inventory and selection
+- Needs to develop trust to provide financial info
+- Needs clear navigation to get to desired products
+
+
+"Once I use my gift card, O don't intend to visit this website again, 
+so I don't understand why I have to create an account."
+
+Frustrations:
+- Being required to register to make a purchase
+- Excessive attempts to sign up for a newsletter
+- Not finding the items they are interested in
+
+Shopping habits:
+- Visiting solely due to a one-time need
+- May be browsing, or researching, or other
+- Oftenn a gift buyer or gift card recipient
+
+
+----------------------------------------------
+Bargain-hunting shopper persona
+-----------------------------------------------
+Wants&needs
+- Wants to get the best deals possible
+- Wants to freaquently see new deals and offers
+- Wants to receive coupons, offers, and discounts
+- Needs to see clearly listed prices and savings
+- Needs to easily be able to apply discount codes
+- Needs to feel sense of accomplishments
+
+"It's so dissapointing when a discount code doesn't work at the checkout, or there is no clearly 
+stated where the code must be inserted. It is very annoying - makes yo not want to go through the 
+order anymore."
+
+Frustrations:
+- Sale items hidden or not listed alongside others
+- Saving amount after discount not highlighted
+- Not getting the deal email right after signing up
+
+Shopping habits:
+- Enticed into buying by the idea of a good deal
+- Willing to spend extra money to quality for savings
+- Return to the site specifically looking for a sale
+
+----------------------------------------------------
+Researching shopper
+------------------------------------------------------
+Wants&needs:
+- Wants to learn more about a product before buying
+- Wants to feel confident that he is making the right choice
+- Wants to feel guided by a knowledgeable source
+- Needs detailed product descriptions and clear navigation
+
+Frustrations:
+- Limited or conflicting information throughout the website
+- Unclear product differentiation or lack of comarison tools
+- Inconsistent, incomplete or missing product descriptions
+- Lack of trust elements like authentic reviews by other buyers
+- Inability to save multiple products to narrow down options
+
+Shopping habits:
+- Could buy days, weeks, or even months after researching
+- Collecting information about products, features, and prices
+- Likes large amounts of information that are well paced
+- May visit multiple sites before commiting to a purchase
+- More likely to buy from a source of trustworthy information
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

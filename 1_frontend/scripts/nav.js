@@ -2,9 +2,12 @@
 const headerTop = document.querySelector('header');
 
 const navigationShopLinksToggler = document.querySelector(
-  '.navigation-shop-link'
+  '.navigation-toggler '
 );
-const shopLinks = document.querySelector('.shop-hover-links-wrapper');
+const shopLinks = document.querySelector('.navigation-links-wrapper');
+const sectionShopLinks = document.querySelector('.navigation-shop-link');
+const shopLinksWrapper = document.querySelector('.shop-hover-links-wrapper');
+
 //functions
 // const renderTopNavigation = () => {};
 
@@ -19,4 +22,14 @@ navigationShopLinksToggler.addEventListener('click', (e) => {
     shopLinks.style.display = 'none';
   }
 });
+sectionShopLinks.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  if (shopLinksWrapper.style.display === 'none') {
+    shopLinksWrapper.style.display = 'block';
+  } else {
+    shopLinksWrapper.style.display = 'none';
+  }
+});
+
 // document.addEventListener('DOMContentLoaded', renderTopNavigation);

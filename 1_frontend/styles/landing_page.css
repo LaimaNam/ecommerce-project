@@ -64,6 +64,7 @@ header .header-top .header-top-left {
 }
 
 header .header-top .header-top-left img {
+  width: 100%;
   max-width: 100%;
 }
 
