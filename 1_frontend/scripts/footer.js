@@ -16,6 +16,7 @@ const renderNewsletterForm = () => {
   const emailInput = document.createElement('input');
   emailInput.setAttribute('type', 'email');
   emailInput.setAttribute('placeholder', 'Sign up now');
+  emailInput.setAttribute('id', 'newsletterEmailInput');
 
   const signUpNewsletterBtn = document.createElement('button');
   signUpNewsletterBtn.setAttribute('class', 'btn-primary-dark');
@@ -25,6 +26,46 @@ const renderNewsletterForm = () => {
 
   form.append(label, inputsDiv);
   newsletterFormSection.append(form);
+
+  const newsletterForm = document.querySelector('#signupToNewsletterForm');
+  const EMAILS_URI = 'http://localhost:8000/api/newsletterEmails';
+
+  newsletterForm.addEventListener('submit', (e) => {
+    sendEmailToDB(e, EMAILS_URI, newsletterForm);
+  });
+};
+
+const sendEmailToDB = (e, emailsUri, newsletterForm) => {
+  e.preventDefault();
+
+  let email = {
+    email: e.target.newsletterEmailInput.value,
+  };
+
+  console.log(email);
+
+  return fetch(emailsUri, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(email),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.success) {
+        swal({
+          title: 'Thank you!',
+          text: data.message,
+          icon: 'success',
+          button: 'Ok!',
+        });
+      } else {
+        swal('Error', data.message, 'error');
+      }
+      newsletterForm.reset();
+    })
+    .catch((err) => console.log(err));
 };
 
 // -- creating footer bottom
