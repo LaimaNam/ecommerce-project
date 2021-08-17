@@ -7,9 +7,9 @@
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
     ),
-    url(https://images.unsplash.com/photo-1566678124687-0cf350e352c8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+    url(../assets/landing-page-banner-1.jpg);
   object-fit: cover;
-  height: 70vh;
+  height: 100vh;
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -35,6 +35,9 @@
 }
 
 /* sale banner - time counter */
+.sale-banner {
+  margin-top: -30px;
+}
 .sale-banner .sale-end-counter-wrapper {
   text-align: center;
 }
@@ -128,6 +131,20 @@
     url(https://images.unsplash.com/photo-1595350072557-6a6fbced4c2f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
 }
 
+/* C A R O U S E L */
+.carousel-indicators button {
+  color: var(--var-dark-color) !important;
+}
+
+.carousel-item img {
+  padding: 0 40px;
+}
+
+.carousel-control-next span,
+.carousel-control-prev span {
+  background-color: var(--var-dark-color) !important;
+}
+
 /* ----- t a b l e t   v i e w ----------- */
 @media screen and (min-width: 540px) {
   .landing-page-category-banners .landing-page-category-banners-item {
@@ -141,6 +158,11 @@
 @media screen and (min-width: 990px) {
   .landing-page-banner {
     margin: 0 30px;
+  }
+
+  .sale-banner {
+    margin-right: 30px;
+    margin-left: 30px;
   }
 }
 

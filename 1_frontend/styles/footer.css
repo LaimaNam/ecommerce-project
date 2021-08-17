@@ -12,3 +12,120 @@
   padding: 8px 12px;
   height: 52px;
 }
+
+/* F o o t e r  b o t t o m */
+.footer-bootom-section {
+  text-align: center;
+  background-color: var(--var-dark-color);
+  color: var(--var-white);
+}
+
+.follow-us-wrapper {
+  padding: 70px 0px 50px 0px;
+}
+
+.follow-us-wrapper h3,
+.map-wrapper h3,
+.contacts h3 {
+  font-size: 1.3em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 0px;
+}
+
+.social-media-icons a i {
+  font-size: 2em;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-us-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.email,
+.phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.email i,
+.phone i {
+  font-size: 1.2em;
+}
+
+.map-wrapper {
+  padding: 0px 20px;
+}
+
+.map-wrapper div {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.map-wrapper div iframe {
+  height: 300px;
+}
+
+.all-rights-reserved {
+  padding: 10px 0px;
+}
+
+.all-rights-reserved span {
+  font-size: 0.7em;
+  letter-spacing: 1px;
+}
+
+.all-rights-reserved i {
+  font-size: 0.8em;
+}
+
+/* ----- t a b l e t   v i e w ----------- */
+@media screen and (min-width: 768px) {
+  .footer-top-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+  }
+
+  .social-media-icons {
+    gap: 50px;
+  }
+
+  .contacts {
+    margin-top: 80px;
+  }
+
+  .contact-us-wrapper {
+    flex-direction: column;
+  }
+
+  .follow-us-wrapper,
+  .map-wrapper {
+    padding: 50px 0px;
+  }
+
+  .map-wrapper div iframe {
+  }
+}
+
+/*  ------- d e s k t o p   v i e w ----------- */
+
+@media screen and (min-width: 1024px) {
+}

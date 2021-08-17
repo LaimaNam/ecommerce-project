@@ -43,6 +43,12 @@ header .header-top .header-top-right span {
   /* font-size: 0.9em;
     font-weight: 500; */
 }
+header .header-top .header-top-right .header-top-right-phone {
+  display: none;
+}
+header .header-top .header-top-right .header-top-right-email {
+  display: none;
+}
 
 header .header-top .header-top-right .header-top-right-cart {
   cursor: pointer;
@@ -117,6 +123,13 @@ nav .shop-links-wrapper .shop-links-list li:not(:last-child) {
 /* ----- t a b l e t   v i e w ----------- */
 
 @media screen and (min-width: 768px) {
+  header .header-top .header-top-right .header-top-right-phone {
+    display: block;
+  }
+  header .header-top .header-top-right .header-top-right-email {
+    display: block;
+  }
+
   .navigation-toggler i {
     display: none;
   }

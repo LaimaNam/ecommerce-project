@@ -3,7 +3,9 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
-import NewsletterEmail from './models/newsletterEmailModel.js';
+// Controllers
+import postNewsletterEmail from './controllers/postNewsletterEmail.js';
+import getNewsletterEmails from './controllers/getNewsletterEmails.js';
 
 dotenv.config();
 
@@ -34,25 +36,8 @@ app.get('/', (req, res) => {
   res.send('API is running...');
 });
 
-// -- POST route for newsletter emails
-app.post('/api/newsletterEmails', (req, res) => {
-  if (!req.body.email) {
-    res.status(400).json({
-      message: 'Please enter your email correctly!',
-      success: false,
-    });
-    return;
-  }
+// -- GET  and POST routes for newsletter emails
+app.get('/api/newsletterEmails', getNewsletterEmails);
+app.post('/api/newsletterEmails', postNewsletterEmail);
 
-  const email = new NewsletterEmail(req.body);
-  console.log(email);
-  email
-    .save()
-    .then((data) => {
-      res.json({
-        message: 'You registered to our email list! Thank you!:)',
-        success: true,
-      });
-    })
-    .catch((err) => console.log(err));
-});
+// GET landing page banners
