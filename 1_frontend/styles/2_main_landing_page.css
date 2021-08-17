@@ -132,6 +132,18 @@
 }
 
 /* C A R O U S E L */
+.new-arrivals {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.new-arrivals h5 {
+  border-top: 1px solid var(--var-light-grey);
+  width: fit-content;
+  margin: 15px auto;
+  padding-top: 10px;
+}
 .carousel-indicators button {
   color: var(--var-dark-color) !important;
 }
