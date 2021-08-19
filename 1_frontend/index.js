@@ -1,5 +1,8 @@
-import renderNavigation from './scripts/nav.js';
-import { renderNewsletterForm, renderFooter } from './scripts/footer.js';
+import renderNavigation from './scripts/components/nav.js';
+import {
+  renderNewsletterForm,
+  renderFooter,
+} from './scripts/components/footer.js';
 
 // -- V A R I A B L E S
 

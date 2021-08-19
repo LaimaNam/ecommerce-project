@@ -157,6 +157,7 @@
   background-color: var(--var-dark-color) !important;
 }
 
+/* M E D I A   Q U E R I E S */
 /* ----- t a b l e t   v i e w ----------- */
 @media screen and (min-width: 540px) {
   .landing-page-category-banners .landing-page-category-banners-item {
