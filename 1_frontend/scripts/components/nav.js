@@ -35,7 +35,7 @@ const renderNavigation = () => {
       </div>
       <nav>
         <a href=${
-          location.href.includes('pages') ? '../index.html' : 'index.html'
+          location.href.includes('pages') ? '../index.html' : './index.html'
         }>Home</a>
         <a href="" class="nav-shop-link"
           >Shop <i class="fas fa-angle-down"></i
@@ -44,8 +44,8 @@ const renderNavigation = () => {
           <ul class="shop-links-list">
             <li><a href=${
               location.href.includes('pages')
-                ? 'shop.html'
-                : './pages/shop.html'
+                ? './productsPage.html'
+                : './pages/productsPage.html'
             }>All</a></li>
             <li><a href="">Accessories</a></li>
             <li><a href="">Jewelry</a></li>

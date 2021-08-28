@@ -28,6 +28,7 @@
   margin-bottom: 10px;
   text-align: center;
   font-weight: 400;
+  padding: 10px;
 }
 
 .landing-page-banner button {
@@ -48,6 +49,13 @@
   background-color: var(--var-dark-color);
   padding-bottom: 10px;
   margin-top: 5px;
+}
+
+#end {
+  padding: 10px 10px 0 10px;
+  font-size: 0.5em;
+  letter-spacing: 1px;
+  font-weight: 100;
 }
 
 /* category banners */
