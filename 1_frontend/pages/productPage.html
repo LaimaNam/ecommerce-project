@@ -5,6 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product page</title>
+    <!-- Fontawesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+     <!-- custom JS -->
+     <script defer src="../index.js" type="module"></script>
+     <script defer src="../scripts/productPage.js" type="module"></script>
+     <!-- custom CSS -->
+     <link rel="stylesheet" href="../styles/1_navigation.css" />
+     <link rel="stylesheet" href="../styles/0_utilities.css" />
+     <link rel="stylesheet" href="../styles/2_main_product_page.css" />
+     <link rel="stylesheet" href="../styles/footer.css" />
+   </head>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <!-- rendered with nav.js -->
+    </header>
+    <main>
+      <section>
+        <div class="product-item">
+       
+       </div>
+       <div class="product-page-buttons">
+         <button class="btn-primary-dark product-item-page-btn"><a href="">ADD TO SHOPPING CART</a> </button>
+         <button class="btn-primary-light product-item-page-btn"><a href="">ADD TO DREAM BOX</a> </button>
+       </div>
+      <div class="product-info-icons">
+        <div>
+          <i class="fas fa-lock"></i>
+          <p>SECURE PAYMENTS</p>
+        </div>
+        <div>
+          <i class="fas fa-truck"></i>
+          <p>STANDART 4-8 DAYS DELIVERY</p>
+        </div>
+        <div>
+          <i class="fas fa-history"></i>
+          <p>RETURNS 15 DAYS</p>
+        </div>
+      </div>
+      <div class="product-item-description">
+        <h4>Item description</h4>
+        <div class="item-description"></div>
+      </div>
+
+      </section>
+      
+
+    </main>
+    <footer>
+      <!-- rendered with footer.js -->
+      <section class="singup-newsletter-form-wrapper"></section>
+      <section class="footer-bootom-section"></section>
+    </footer>
+  </body>
 </html>

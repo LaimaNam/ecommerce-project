@@ -12,6 +12,16 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
+a {
+  text-decoration: none;
+  color: var(--var-white);
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
 /* utilities */
 
 main {
@@ -39,20 +49,28 @@ main {
   cursor: pointer;
 }
 
+.btn-primary-light {
+  padding: 15px 20px;
+  background-color: var(--var-light-grey);
+  color: var(--var-dark-color);
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  border: 0;
+  cursor: pointer;
+  border-radius: 0;
+  font-size: 1em;
+  cursor: pointer;
+}
+
 .btn-primary-dark:hover {
   background-color: #464647;
 }
 
+.btn-primary-light:hover {
+  background-color: #464647;
+}
+
+.btn-primary-light:hover a,
 .btn-primary-dark:hover a {
   color: var(--var-white) !important;
-}
-
-a {
-  text-decoration: none;
-  color: var(--var-white);
-  cursor: pointer;
-}
-
-ul {
-  list-style: none;
 }

@@ -146,12 +146,34 @@
   margin: auto;
 }
 
+.new-arrivals h3 {
+  margin-bottom: 20px;
+}
+
 .new-arrivals h5 {
-  border-top: 1px solid var(--var-light-grey);
+  /* border-top: 1px solid var(--var-light-grey); */
   width: fit-content;
   margin: 15px auto;
+  width: 80%;
   padding-top: 10px;
 }
+
+.new-arrivals img {
+  object-fit: cover;
+  height: 400px;
+}
+
+.product-category {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8em;
+}
+
+.product-price {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 .carousel-indicators button {
   color: var(--var-dark-color) !important;
 }
