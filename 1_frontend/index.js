@@ -1,3 +1,4 @@
+// -- I M P O R T S
 import renderNavigation from './scripts/components/nav.js';
 import {
   renderNewsletterForm,
@@ -13,8 +14,6 @@ const addSwalScript = () => {
   s.setAttribute('src', 'https://unpkg.com/sweetalert/dist/sweetalert.min.js');
   document.body.appendChild(s);
 };
-
-// loading css files
 
 // -- E V E N T S
 document.addEventListener('DOMContentLoaded', () => {

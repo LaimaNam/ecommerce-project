@@ -103,6 +103,10 @@ nav a {
   font-weight: 600;
 }
 
+nav a:hover {
+  color: var(--var-dark-color) !important;
+}
+
 nav .shop-links-wrapper {
   background: #fff;
   display: none;

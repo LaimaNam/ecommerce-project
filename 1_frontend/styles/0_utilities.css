@@ -14,6 +14,11 @@ body {
 
 /* utilities */
 
+main {
+  max-width: 1024px;
+  margin: auto;
+}
+
 :root {
   --var-black: rgb(0, 0, 0);
   --var-dark-color: #212127;
@@ -36,6 +41,10 @@ body {
 
 .btn-primary-dark:hover {
   background-color: #464647;
+}
+
+.btn-primary-dark:hover a {
+  color: var(--var-white) !important;
 }
 
 a {

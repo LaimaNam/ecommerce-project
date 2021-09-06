@@ -5,11 +5,13 @@ const renderNavigation = () => {
   header.innerHTML = `
   <div class="header-top">
         <div class="header-top-left">
-          <a href="index.html"><img src=${
-            location.href.includes('pages')
-              ? '../assets/shop-logo.png'
-              : './assets/shop-logo.png'
-          } alt="" /></a>
+          <a href="${
+            location.href.includes('pages') ? '../index.html' : './index.html'
+          }"><img src=${
+    location.href.includes('pages')
+      ? '../assets/shop-logo.png'
+      : './assets/shop-logo.png'
+  } alt="" /></a>
         </div>
         <div class="header-top-right">
           <div class="header-top-right-phone">
@@ -21,7 +23,11 @@ const renderNavigation = () => {
             <span>mail@shop.io</span>
           </div>
           <div class="header-top-right-cart">
-            <i class="fas fa-shopping-cart"></i>
+          <a href="${
+            location.href.includes('pages')
+              ? './cartPage.html'
+              : './pages/cartPage.html'
+          }"><i class="fas fa-shopping-cart"></i></a>
             <span class="cart-items"
               ><span id="cart-items-count">0</span>
             </span>

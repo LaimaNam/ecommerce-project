@@ -6,6 +6,9 @@ import dotenv from 'dotenv';
 // Controllers
 import postNewsletterEmail from './controllers/postNewsletterEmail.js';
 import getNewsletterEmails from './controllers/getNewsletterEmails.js';
+import getAllProducts from './controllers/getAllproducts.js';
+import getProduct from './controllers/getProduct.js';
+import getProductsByCategory from './controllers/getProductsByCategory.js';
 
 dotenv.config();
 
@@ -41,3 +44,8 @@ app.get('/api/newsletterEmails', getNewsletterEmails);
 app.post('/api/newsletterEmails', postNewsletterEmail);
 
 // GET landing page banners
+
+//GET all products || one product by id || by category
+app.get('/api/allProducts', getAllProducts);
+app.get('/api/allProducts/:id', getProduct);
+app.get('/api/productsByCategory/:category', getProductsByCategory);

@@ -1,11 +1,11 @@
 /* s i g n   u p   f o r m */
 .singup-newsletter-form-wrapper {
   padding: 60px 15px;
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   text-align: center;
 }
 .singup-newsletter-form-wrapper #signupToNewsletterForm input {
