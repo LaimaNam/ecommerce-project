@@ -37,15 +37,15 @@ const renderProducts = (data) => {
 };
 
 // L o c a l  S t o r a g e
-const updateListOnLocalStorage = (products) => {
+export const updateListOnLocalStorage = (products) => {
   localStorage.setItem("products", JSON.stringify(products));
 };
 
-const getItemsFromLocalStorage = () => {
+export const getItemsFromLocalStorage = () => {
   return JSON.parse(localStorage.getItem("products"));
 };
 
-const saveToLocalStorage = (e) => {
+export const saveToLocalStorage = (e) => {
   let arrayOfCartProducts = [];
 
   if (getItemsFromLocalStorage()) {
