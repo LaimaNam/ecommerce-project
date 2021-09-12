@@ -50,13 +50,13 @@
   margin-bottom: 10px;
 }
 
-.product-item-action-icons a i {
+.product-item-action-icons i {
   color: var(--var-light-grey);
   padding: 3px;
   font-size: 1.5em;
   transition: 0.3s;
 }
-.product-item-action-icons a i:hover {
+.product-item-action-icons i:hover {
   color: var(--var-dark-color);
   font-size: 1.6em;
 }

@@ -1,7 +1,11 @@
+// -- I M P O R T S
+import { countTotalItemsInCart } from "./components/nav.js";
+
 // -- V A R I A B L E S
-const productsOutput = document.querySelector('.products');
-const productOnPageCount = document.querySelector('#product-onpage-count');
-const filterWrapper = document.querySelector('.product-page-filter');
+// DOM elements
+const productsOutput = document.querySelector(".products");
+const productOnPageCount = document.querySelector("#product-onpage-count");
+const filterWrapper = document.querySelector(".product-page-filter");
 
 // -- F U N C T I O N S
 const renderProducts = (data) => {
@@ -10,8 +14,8 @@ const renderProducts = (data) => {
           <div class="product-item">
              <a href="productPage.html?id=${currentProduct._id}"> <img src="${currentProduct.image[0]}" alt="${currentProduct.title}" /></a>
               <div class="product-item-action-icons">
-                <a><i class="far fa-heart"></i></a>
-                <a><i class="fas fa-plus"></i></a>
+                <i  data-id=${currentProduct._id} class="far fa-heart add-to-wishlist"></i>
+                <i data-id=${currentProduct._id}  class="fas fa-plus add-to-cart"></i>
               </div>
               <h4>${currentProduct.title}</h4>
               <p class="product-category">${currentProduct.category}</p>
@@ -19,9 +23,64 @@ const renderProducts = (data) => {
           </div>
           `;
     return total;
-  }, '');
+  }, "");
+
+  //add to cart button event
+  const addToCartBtns = document.querySelectorAll(".add-to-cart");
+
+  addToCartBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      saveToLocalStorage(e);
+      countTotalItemsInCart();
+    });
+  });
 };
 
+// L o c a l  S t o r a g e
+const updateListOnLocalStorage = (products) => {
+  localStorage.setItem("products", JSON.stringify(products));
+};
+
+const getItemsFromLocalStorage = () => {
+  return JSON.parse(localStorage.getItem("products"));
+};
+
+const saveToLocalStorage = (e) => {
+  let arrayOfCartProducts = [];
+
+  if (getItemsFromLocalStorage()) {
+    arrayOfCartProducts = getItemsFromLocalStorage();
+  }
+
+  let product;
+  let productImage =
+    e.target.parentNode.parentNode.childNodes[1].firstElementChild.currentSrc;
+  let productName = e.target.parentNode.parentNode.childNodes[5].innerText;
+  let productPrice = e.target.parentNode.parentNode.childNodes[9].innerText;
+
+  // check if product already exists in cart
+  arrayOfCartProducts.forEach((cartProduct) => {
+    if (cartProduct.name === productName) {
+      product = cartProduct;
+    }
+  });
+  // if product is found, use it
+  // if product is not found, create new and add to localstorage
+  if (!product) {
+    product = {
+      image: productImage,
+      name: productName,
+      price: productPrice,
+      quantity: 0,
+    };
+    arrayOfCartProducts.push(product);
+  }
+  product.quantity++;
+
+  updateListOnLocalStorage(arrayOfCartProducts);
+};
+
+//  P r o d u c t s  F i l t e r
 const renderFilterBtns = (data) => {
   // -- getting and populating buttons by existing category
   const allCategories = data.map((item) => item.category);
@@ -35,27 +94,27 @@ const renderFilterBtns = (data) => {
       `;
       return total;
     },
-    ''
+    ""
   );
 
   // -- "show all" button creation + event
-  const createShowAllBtn = document.createElement('button');
-  createShowAllBtn.innerText = 'SHOW ALL';
-  createShowAllBtn.setAttribute('id', 'showAllCategoriesBtn');
-  createShowAllBtn.setAttribute('class', 'btn-primary-dark');
+  const createShowAllBtn = document.createElement("button");
+  createShowAllBtn.innerText = "SHOW ALL";
+  createShowAllBtn.setAttribute("id", "showAllCategoriesBtn");
+  createShowAllBtn.setAttribute("class", "btn-primary-dark");
   filterWrapper.prepend(createShowAllBtn);
 
-  createShowAllBtn.addEventListener('click', () => {
+  createShowAllBtn.addEventListener("click", () => {
     renderProducts(data);
   });
 
   // -- filter by category button events
   const filterByCategoryBtns = document.querySelectorAll(
-    '.filter-by-category-btn'
+    ".filter-by-category-btn"
   );
 
   filterByCategoryBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener("click", (e) => {
       e.preventDefault();
       getProductsByCategory(e);
     });
@@ -74,7 +133,7 @@ const getProductsByCategory = (e) => {
 };
 
 const getAllProducts = () => {
-  fetch('http://localhost:8000/api/allProducts')
+  fetch("http://localhost:8000/api/allProducts")
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
@@ -86,6 +145,6 @@ const getAllProducts = () => {
 };
 
 // -- E V E N T S
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   getAllProducts();
 });

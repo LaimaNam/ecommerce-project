@@ -1,16 +1,16 @@
-const renderNavigation = () => {
+export const renderNavigation = () => {
   // -- variables
-  const header = document.querySelector('header');
+  const header = document.querySelector("header");
 
   header.innerHTML = `
   <div class="header-top">
         <div class="header-top-left">
           <a href="${
-            location.href.includes('pages') ? '../index.html' : './index.html'
+            location.href.includes("pages") ? "../index.html" : "./index.html"
           }"><img src=${
-    location.href.includes('pages')
-      ? '../assets/shop-logo.png'
-      : './assets/shop-logo.png'
+    location.href.includes("pages")
+      ? "../assets/shop-logo.png"
+      : "./assets/shop-logo.png"
   } alt="" /></a>
         </div>
         <div class="header-top-right">
@@ -24,9 +24,9 @@ const renderNavigation = () => {
           </div>
           <div class="header-top-right-cart">
           <a href="${
-            location.href.includes('pages')
-              ? './cartPage.html'
-              : './pages/cartPage.html'
+            location.href.includes("pages")
+              ? "./cartPage.html"
+              : "./pages/cartPage.html"
           }"><i class="fas fa-shopping-cart"></i></a>
             <span class="cart-items"
               ><span id="cart-items-count">0</span>
@@ -41,7 +41,7 @@ const renderNavigation = () => {
       </div>
       <nav>
         <a href=${
-          location.href.includes('pages') ? '../index.html' : './index.html'
+          location.href.includes("pages") ? "../index.html" : "./index.html"
         }>Home</a>
         <a href="" class="nav-shop-link"
           >Shop <i class="fas fa-angle-down"></i
@@ -49,9 +49,9 @@ const renderNavigation = () => {
         <div class="shop-links-wrapper">
           <ul class="shop-links-list">
             <li><a href=${
-              location.href.includes('pages')
-                ? './productsPage.html'
-                : './pages/productsPage.html'
+              location.href.includes("pages")
+                ? "./productsPage.html"
+                : "./pages/productsPage.html"
             }>All</a></li>
             <li><a href="">Accessories</a></li>
             <li><a href="">Jewelry</a></li>
@@ -63,28 +63,39 @@ const renderNavigation = () => {
       </nav>
   `;
   const mainNavigationTogglerBtn = document.querySelector(
-    '.navigation-toggler '
+    ".navigation-toggler "
   );
-  const navigation = document.querySelector('nav');
+  const navigation = document.querySelector("nav");
 
-  const shopLinksToggler = document.querySelector('.nav-shop-link');
-  const shopLinks = document.querySelector('.shop-links-wrapper');
+  const shopLinksToggler = document.querySelector(".nav-shop-link");
+  const shopLinks = document.querySelector(".shop-links-wrapper");
 
   // -- navigation button events
-  mainNavigationTogglerBtn.addEventListener('click', () => {
-    navigation.classList.toggle('active');
+  mainNavigationTogglerBtn.addEventListener("click", () => {
+    navigation.classList.toggle("active");
   });
 
-  shopLinksToggler.addEventListener('click', (e) => {
+  shopLinksToggler.addEventListener("click", (e) => {
     e.preventDefault();
 
-    shopLinks.classList.toggle('shopLinksActive');
+    shopLinks.classList.toggle("shopLinksActive");
   });
+
+  // cart items count
+  countTotalItemsInCart();
 };
 
-// -- set number of cart items
-const setCartItems = (number) => {
-  const cart = document.querySelector('#cart-items-count');
+const getItemsFromLocalStorage = () => {
+  return JSON.parse(localStorage.getItem("products"));
 };
+const countTotalPrice = () => {};
 
-export default renderNavigation;
+export const countTotalItemsInCart = () => {
+  let productsAddedToCart = getItemsFromLocalStorage();
+  const cartItemsCount = document.querySelector("#cart-items-count");
+
+  cartItemsCount.innerText = productsAddedToCart.reduce(
+    (total, item) => (total += item.quantity),
+    0
+  );
+};
