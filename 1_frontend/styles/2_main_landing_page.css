@@ -9,7 +9,7 @@
     ),
     url(../assets/landing-page-banner-1.jpg);
   object-fit: cover;
-  height: 100vh;
+  height: 70vh;
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -165,7 +165,7 @@
 
 .product-category {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.8em;
 }
 
