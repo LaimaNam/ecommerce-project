@@ -26,7 +26,70 @@
     <header>
       <!-- injected dynamically with index.js -->
     </header>
-
+    <main>
+      <section class="empty-cart-message-wrapper">
+        <p class="empty-cart-message">There are no items in you cart</p>
+      </section>
+      <section id="cart-main">
+        <section class="cart-header">
+          <h3>My cart</h3>
+        </section>
+        <section class="order-button-wrapper">
+          <button class="order-btn btn-primary-dark">
+            PROCCED WITH YOUR ORDER <i class="fas fa-arrow-right"></i>
+          </button>
+        </section>
+        <section class="cart-output-wrapper">
+          <!-- generates dynamically by cartPage.js -->
+        </section>
+        <!-- --- -->
+        <section class="cart-delivery-information-wrapper">
+          <div class="cart-delivery-information">
+            <p>Select delivery method</p>
+            <div class="cart-delivery-input-wrapper">
+              <input
+                type="radio"
+                name="delivery"
+                id="delivery-standart"
+                value="standart"
+                checked
+              />
+              <label for="delivery-standart"
+                >STANDART - EUR 20,00 | Delivery in 4-8 business days
+              </label>
+            </div>
+            <p>6 times less CO2 emissions than Express delivery</p>
+          </div>
+        </section>
+        <!-- ---- -->
+        <section class="cart-total">
+          <h3>ORDER TOTAL</h3>
+          <p>EUR <span id="total-price"></span></p>
+        </section>
+        <section class="order-button-wrapper">
+          <button class="order-btn btn-primary-dark">
+            PROCCED WITH YOUR ORDER <i class="fas fa-arrow-right"></i>
+          </button>
+        </section>
+        <section class="cart-icons-wrapper">
+          <div>
+            <i class="fas fa-lock"></i>
+            <span>SECURE</span>
+            <span>PAYMENTS</span>
+          </div>
+          <div>
+            <i class="fas fa-truck"></i>
+            <span>STANDART 4-8</span>
+            <span>DAYS DELIVERY</span>
+          </div>
+          <div>
+            <i class="fas fa-undo-alt"></i>
+            <span>RETURNS 15</span>
+            <span>DAYS</span>
+          </div>
+        </section>
+      </section>
+    </main>
     <footer>
       <!-- rendered with footer.js -->
       <section class="singup-newsletter-form-wrapper"></section>

@@ -1,11 +1,11 @@
 // -- I M P O R T S
-import { countTotalItemsInCart } from "./components/nav.js";
+import { countTotalItemsInCart } from './components/nav.js';
 
 // -- V A R I A B L E S
 // DOM elements
-const productsOutput = document.querySelector(".products");
-const productOnPageCount = document.querySelector("#product-onpage-count");
-const filterWrapper = document.querySelector(".product-page-filter");
+const productsOutput = document.querySelector('.products');
+const productOnPageCount = document.querySelector('#product-onpage-count');
+const filterWrapper = document.querySelector('.product-page-filter');
 
 // -- F U N C T I O N S
 const renderProducts = (data) => {
@@ -23,13 +23,13 @@ const renderProducts = (data) => {
           </div>
           `;
     return total;
-  }, "");
+  }, '');
 
   //add to cart button event
-  const addToCartBtns = document.querySelectorAll(".add-to-cart");
+  const addToCartBtns = document.querySelectorAll('.add-to-cart');
 
   addToCartBtns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener('click', (e) => {
       saveToLocalStorage(e);
       countTotalItemsInCart();
     });
@@ -38,11 +38,11 @@ const renderProducts = (data) => {
 
 // L o c a l  S t o r a g e
 export const updateListOnLocalStorage = (products) => {
-  localStorage.setItem("products", JSON.stringify(products));
+  localStorage.setItem('products', JSON.stringify(products));
 };
 
 export const getItemsFromLocalStorage = () => {
-  return JSON.parse(localStorage.getItem("products"));
+  return JSON.parse(localStorage.getItem('products'));
 };
 
 export const saveToLocalStorage = (e) => {
@@ -68,6 +68,7 @@ export const saveToLocalStorage = (e) => {
   // if product is not found, create new and add to localstorage
   if (!product) {
     product = {
+      id: e.target.dataset.id,
       image: productImage,
       name: productName,
       price: productPrice,
@@ -94,27 +95,27 @@ const renderFilterBtns = (data) => {
       `;
       return total;
     },
-    ""
+    ''
   );
 
   // -- "show all" button creation + event
-  const createShowAllBtn = document.createElement("button");
-  createShowAllBtn.innerText = "SHOW ALL";
-  createShowAllBtn.setAttribute("id", "showAllCategoriesBtn");
-  createShowAllBtn.setAttribute("class", "btn-primary-dark");
+  const createShowAllBtn = document.createElement('button');
+  createShowAllBtn.innerText = 'SHOW ALL';
+  createShowAllBtn.setAttribute('id', 'showAllCategoriesBtn');
+  createShowAllBtn.setAttribute('class', 'btn-primary-dark');
   filterWrapper.prepend(createShowAllBtn);
 
-  createShowAllBtn.addEventListener("click", () => {
+  createShowAllBtn.addEventListener('click', () => {
     renderProducts(data);
   });
 
   // -- filter by category button events
   const filterByCategoryBtns = document.querySelectorAll(
-    ".filter-by-category-btn"
+    '.filter-by-category-btn'
   );
 
   filterByCategoryBtns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener('click', (e) => {
       e.preventDefault();
       getProductsByCategory(e);
     });
@@ -133,7 +134,7 @@ const getProductsByCategory = (e) => {
 };
 
 const getAllProducts = () => {
-  fetch("http://localhost:8000/api/allProducts")
+  fetch('http://localhost:8000/api/allProducts')
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
@@ -145,6 +146,6 @@ const getAllProducts = () => {
 };
 
 // -- E V E N T S
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   getAllProducts();
 });

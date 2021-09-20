@@ -1,15 +1,15 @@
 // getting product id from query string
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const queryId = urlParams.get("id");
+const queryId = urlParams.get('id');
 console.log(queryId);
 
 // imports
-import { countTotalItemsInCart } from "./components/nav.js";
+import { countTotalItemsInCart } from './components/nav.js';
 
 //DOM elements
-const productItemWrapper = document.querySelector(".product-item");
-const productDescription = document.querySelector(".item-description");
+const productItemWrapper = document.querySelector('.product-item');
+const productDescription = document.querySelector('.item-description');
 
 const renderProductPage = (product) => {
   productItemWrapper.innerHTML = `
@@ -29,9 +29,9 @@ const renderProductPage = (product) => {
     <p>${product.description}</p>
     `;
 
-  const addToCartBtn = document.querySelector(".add-to-cart");
+  const addToCartBtn = document.querySelector('.add-to-cart');
 
-  addToCartBtn.addEventListener("click", (e) => {
+  addToCartBtn.addEventListener('click', (e) => {
     e.preventDefault();
     saveToLocalStorage(e);
     countTotalItemsInCart();
@@ -49,11 +49,11 @@ const renderProductPage = (product) => {
 
 // L o c a l  S t o r a g e
 const updateListOnLocalStorage = (products) => {
-  localStorage.setItem("products", JSON.stringify(products));
+  localStorage.setItem('products', JSON.stringify(products));
 };
 
 const getItemsFromLocalStorage = () => {
-  return JSON.parse(localStorage.getItem("products"));
+  return JSON.parse(localStorage.getItem('products'));
 };
 
 const saveToLocalStorage = (e) => {
@@ -81,6 +81,7 @@ const saveToLocalStorage = (e) => {
   // if product is not found, create new and add to localstorage
   if (!product) {
     product = {
+      id: e.target.dataset.id,
       image: productImage,
       name: productName,
       price: productPrice,
@@ -102,7 +103,7 @@ const getProduct = (id) => {
     .catch((err) => console.log(err));
 };
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   getProduct(queryId);
 });
 

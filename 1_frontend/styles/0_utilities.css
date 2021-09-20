@@ -18,6 +18,10 @@ a {
   cursor: pointer;
 }
 
+i {
+  cursor: pointer;
+}
+
 ul {
   list-style: none;
 }
