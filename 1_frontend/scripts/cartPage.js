@@ -80,6 +80,7 @@ const increaseCartItemsQuantity = (id) => {
   const itemsInCart = getItemsFromLocalStorage();
   //find item by id
   const itemToIncrease = itemsInCart.find((item) => item.id === id);
+  console.log(itemToIncrease);
   //item quantity ++
   itemToIncrease.quantity++;
 
@@ -141,8 +142,8 @@ const removeFromCart = (id) => {
 
 //check if there is items in the cart, if not - show the message, not the cart
 const checkCartStatus = () => {
-  console.log(getItemsFromLocalStorage());
-  if (!getItemsFromLocalStorage().length < 1 || !getItemsFromLocalStorage()) {
+  if (getItemsFromLocalStorage() !== null) {
+    //show cart with products
     emptyCartMsn.setAttribute('class', 'display-none');
     cartMainContent.removeAttribute('class', 'display-none');
   } else {

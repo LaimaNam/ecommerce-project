@@ -1,5 +1,5 @@
 const saleCounter = () => {
-  let countDownDate = new Date('Aug 25, 2021 16:37:52').getTime();
+  let countDownDate = new Date('Nov 25, 2021 16:37:52').getTime();
 
   // Run function every second
   let countTimeUntillSaleEnds = setInterval(function () {

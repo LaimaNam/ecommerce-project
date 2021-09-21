@@ -20,7 +20,7 @@ const renderProductPage = (product) => {
             <p class="product-price">EUR ${product.price}</p>
         </div>
         <div class="product-page-buttons">
-          <button class="btn-primary-dark product-item-page-btn add-to-cart">ADD TO SHOPPING CART</button>
+          <button class="btn-primary-dark product-item-page-btn add-to-cart" data-id=${product._id}>ADD TO SHOPPING CART</button>
           <button class="btn-primary-light product-item-page-btn add-to-wishlist">ADD TO DREAM BOX </button>
         </div>
     `;
@@ -35,15 +35,6 @@ const renderProductPage = (product) => {
     e.preventDefault();
     saveToLocalStorage(e);
     countTotalItemsInCart();
-    console.log(
-      e.target.parentNode.parentNode.childNodes[1].firstElementChild.currentSrc
-    );
-    console.log(
-      e.target.parentNode.parentNode.childNodes[3].childNodes[1].innerText
-    );
-    console.log(
-      e.target.parentNode.parentNode.childNodes[3].childNodes[5].innerText
-    );
   });
 };
 

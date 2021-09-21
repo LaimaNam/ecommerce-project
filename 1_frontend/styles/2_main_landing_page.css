@@ -58,6 +58,44 @@
   font-weight: 100;
 }
 
+/* sale banner */
+.sale-info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  padding-bottom: 60px;
+  margin: 30px;
+  margin-bottom: 0;
+  background-color: #dbf0fe;
+  text-align: center;
+  color: #1a6af4;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sale-info-section .sale-info-header {
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+.sale-info-section .sale-info-percents {
+  font-weight: bold;
+  font-size: 2.2em;
+  color: #ff247c;
+  font-family: 'Playfair Display', serif;
+}
+
+.sale-info-section p {
+  text-shadow: 6px 2px 10px #ff247c;
+  letter-spacing: 2px;
+}
+
+.sale-info-section span {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
 /* category banners */
 .landing-page-category-banners {
   display: flex;
@@ -165,7 +203,7 @@
 
 .product-category {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.8em;
 }
 
