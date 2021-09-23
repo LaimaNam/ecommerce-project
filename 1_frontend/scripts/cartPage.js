@@ -7,6 +7,7 @@ const emptyCartMsn = document.querySelector('.empty-cart-message');
 const cartMainContent = document.querySelector('#cart-main');
 const cartItemsOutput = document.querySelector('.cart-output-wrapper');
 const totalPriceOutput = document.querySelector('#total-price');
+const orderBtn = document.querySelectorAll('.order-btn');
 
 // -- LOCAL STORAGE
 const getItemsFromLocalStorage = () => {
@@ -90,6 +91,7 @@ const increaseCartItemsQuantity = (id) => {
   countTotalItemsInCart();
   countTotalPrice();
 };
+
 // decrease item quantity in the cart (also you can remove item by decreasing until < 1)
 const decreaseCartItemsQuantity = (id) => {
   const itemsInCart = getItemsFromLocalStorage();
@@ -142,18 +144,21 @@ const removeFromCart = (id) => {
 
 //check if there is items in the cart, if not - show the message, not the cart
 const checkCartStatus = () => {
-  if (getItemsFromLocalStorage() !== null) {
+  if (getItemsFromLocalStorage() === null) {
+    emptyCartMsn.removeAttribute('class', 'display-none');
+    cartMainContent.setAttribute('class', 'display-none');
+  } else if (getItemsFromLocalStorage().length === 0) {
+    emptyCartMsn.removeAttribute('class', 'display-none');
+    cartMainContent.setAttribute('class', 'display-none');
+  } else {
     //show cart with products
     emptyCartMsn.setAttribute('class', 'display-none');
     cartMainContent.removeAttribute('class', 'display-none');
-  } else {
-    emptyCartMsn.removeAttribute('class', 'display-none');
-    cartMainContent.setAttribute('class', 'display-none');
   }
 };
 
 //counting order total amount
-const countTotalPrice = () => {
+export const countTotalPrice = () => {
   const products = getItemsFromLocalStorage();
 
   const totalSum = products.reduce(
@@ -164,6 +169,12 @@ const countTotalPrice = () => {
   totalPriceOutput.innerText = (totalSum + 20).toFixed(2);
 };
 
+//order button event
+orderBtn.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    location.href = './orderPage.html';
+  });
+});
 // -- EVENTS
 document.addEventListener('DOMContentLoaded', () => {
   checkCartStatus();

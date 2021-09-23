@@ -43,8 +43,6 @@ const sendEmailToDB = (e, emailsUri, newsletterForm) => {
     email: e.target.newsletterEmailInput.value,
   };
 
-  console.log(email);
-
   return fetch(emailsUri, {
     method: 'POST',
     headers: {

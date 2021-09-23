@@ -9,6 +9,7 @@ import getNewsletterEmails from './controllers/getNewsletterEmails.js';
 import getAllProducts from './controllers/getAllproducts.js';
 import getProduct from './controllers/getProduct.js';
 import getProductsByCategory from './controllers/getProductsByCategory.js';
+import { getOrders, getOrder, postOrder } from './controllers/orders.js';
 
 dotenv.config();
 
@@ -49,3 +50,7 @@ app.post('/api/newsletterEmails', postNewsletterEmail);
 app.get('/api/allProducts', getAllProducts);
 app.get('/api/allProducts/:id', getProduct);
 app.get('/api/productsByCategory/:category', getProductsByCategory);
+
+// -- GET  and POST routes for orders
+app.get('/api/orders', getOrders);
+app.post('/api/orders', postOrder);

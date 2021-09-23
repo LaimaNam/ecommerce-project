@@ -137,7 +137,6 @@ const getAllProducts = () => {
   fetch('http://localhost:8000/api/allProducts')
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       let reversedData = data.reverse();
       renderProducts(reversedData);
       renderFilterBtns(data);

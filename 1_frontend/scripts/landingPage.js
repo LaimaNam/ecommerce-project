@@ -8,9 +8,7 @@ const getData = () => {
   fetch('http://localhost:8000/api/allProducts')
     .then((res) => res.json())
     .then((data) => {
-      let reversedData = data.reverse().slice(0, 3);
-      console.log(reversedData);
-      renderCarousselItems(reversedData);
+      renderCarousselItems(data.slice(0, 3));
     });
 };
 
@@ -45,6 +43,6 @@ const renderCarousselItems = (reversedData) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  saleCounter();
+  // saleCounter();
   getData();
 });

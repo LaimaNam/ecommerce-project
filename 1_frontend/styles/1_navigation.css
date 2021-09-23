@@ -2,6 +2,10 @@
 /* ----- H E A D E R + navigation -------- */
 header {
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--var-white);
 }
 
 header .header-top {

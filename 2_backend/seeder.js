@@ -10,7 +10,7 @@ import fs from 'fs';
 let rawdata = fs.readFileSync('./sample_data/sampleProduct.json');
 let products = JSON.parse(rawdata);
 
-Product.deleteMany();
+Product.deleteMany({});
 Product.insertMany(products);
 
 mongoose
